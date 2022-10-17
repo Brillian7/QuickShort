@@ -107,9 +107,31 @@ namespace QuickShort
             Console.WriteLine("======================================");
 
             for(int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber of comparisons: "+ cmp_count);
+            Console.WriteLine("\nNumber of data movements: "+ mov_count);
+        }
+
+        int getSize()
+        {
+            return n;
         }
         static void Main(string[] args)
         {
+            //Declaring the object of the class
+            Program mylist = new Program();
+            //Accept array elements
+            mylist.read();
+            //calling the sorting function
+            //first call to quick short Alogarithm
+            mylist.q_short(0, mylist.getSize() - 1);
+            //display sorted array
+            mylist.display();
+            //to exit from the console
+            Console.WriteLine("\n\nPress Enter to exit.");
+            Console.Read();
         }
     }
 }
