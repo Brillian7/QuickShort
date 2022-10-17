@@ -57,6 +57,20 @@ namespace QuickShort
             if (low > high)
                 return;
 
+            //partition the list into two parts:
+            //one containing elements less that or equal tompivot
+            //other conntainning elemnts greather than pivot
+
+            i = low + i;
+            j = high;
+
+            pivot = arr[low];
+
+            while (i <= j)
+            {
+
+            }
+
             
         }
         static void Main(string[] args)
