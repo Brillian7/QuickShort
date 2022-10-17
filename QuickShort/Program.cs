@@ -83,6 +83,20 @@ namespace QuickShort
                 }
             }
 
+            //j now contains the index of the last element in the sorted list
+
+            if (low<j)
+            {
+                //move the pivot to its correct positon in the list
+                swap(low,j);
+                mov_count++;
+            }
+            //short the list on the left of pivot using quick short
+            q_short(low, j - 1);
+
+            //short the list on the right of pivot using quick short
+            q_short(j+1, high);
+
             
         }
         static void Main(string[] args)
